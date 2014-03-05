@@ -349,9 +349,25 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
-    }
+    },
+    protractor: {
+      options: {
+        keepAlive: true, // If false, the grunt process stops when the test fails.
+        noColor: false, // If true, protractor will not use colors in its output.
+        args: {
+          // Arguments passed to the command
+        }
+      },
+      run: {
+        options: {
+          configFile: 'protractor.conf.js', // Target-specific config file
+          args: {} // Target-specific arguments
+        }
+      },
+    },
   });
 
+  grunt.loadNpmTasks('grunt-protractor-runner');
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
