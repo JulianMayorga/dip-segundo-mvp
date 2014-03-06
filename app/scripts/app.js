@@ -4,6 +4,7 @@ angular.module('anotableApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'hljs',
   'ngRoute'
 ])
 .config(function ($routeProvider) {
