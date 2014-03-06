@@ -1,11 +1,10 @@
 'use strict';
 
 describe('App', function() {
-  it('deberia decir anotable', function() {
+  it('deberia inicializar annotator', function() {
     browser.get('/#/');
-
-    var h3 = element(by.css('.text-muted'));
-
-    expect(h3.getText()).toEqual('anotable');
+    //deberia tener la clase .annotator-wrapper en div #example
+    var wrapper = element(by.css('.annotator-wrapper'));
+    expect(wrapper.isPresent()).toBe(true);
   });
 });

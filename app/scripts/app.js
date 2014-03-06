@@ -15,5 +15,4 @@ angular.module('anotableApp', [
   .otherwise({
     redirectTo: '/'
   });
-  $(document.body).annotator().annotator("addPlugin", "Touch");
 });
