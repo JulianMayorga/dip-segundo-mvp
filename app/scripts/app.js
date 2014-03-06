@@ -6,13 +6,14 @@ angular.module('anotableApp', [
   'ngSanitize',
   'ngRoute'
 ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+.config(function ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl'
+  })
+  .otherwise({
+    redirectTo: '/'
   });
+  $(document.body).annotator().annotator("addPlugin", "Touch");
+});

@@ -2,9 +2,10 @@
 
 angular.module('anotableApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.code =
+      '<pre>\n' +
+      '  <code>\n' +
+      '    <div>Hola Mundo</div>\n'+
+      '  </code>\n' +
+      '</pre>';
   });
