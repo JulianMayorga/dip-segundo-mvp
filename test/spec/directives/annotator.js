@@ -6,15 +6,19 @@ describe('Directive: annotator', function () {
   beforeEach(module('anotableApp'));
 
   var element,
-    scope;
+    scope,
+    $window;
 
-  beforeEach(inject(function ($rootScope) {
+  beforeEach(inject(function ($rootScope, _$window_) {
     scope = $rootScope.$new();
+    $window = _$window_;
   }));
 
-  it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<annotator></annotator>');
+  xit('should make hidden element visible', inject(function ($compile) {
+    var spy = spyOn($window.$.fn, 'annotator');
+    element = angular.element('<div annotator></div>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the annotator directive');
+    expect(spy).toHaveBeenCalled();
   }));
+
 });
