@@ -17,8 +17,8 @@ describe('App', function() {
   });
 
   it('deberia cambiar la pagina al cliquear un dip', function () {
-    var dips = element.all(by.css('.dips li'));
-    dips.first().click();
-    expect(browser.getCurrentUrl()).toContain('/dip/');
+    var primerDip = element(by.repeater('dip in dips').row(0).column('{{dip.nombre}}'));
+    primerDip.click();
+    expect(browser.getCurrentUrl()).toContain('/dip/1');
   });
 });

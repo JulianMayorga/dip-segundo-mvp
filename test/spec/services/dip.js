@@ -25,8 +25,8 @@ describe('Service: Dip', function () {
     var codigo = '<div>Hola mundo</div>';
     var dip = new Dip(nombre, codigo);
     var otroDip = new Dip(nombre, codigo);
-    expect(dip.id).toBe(1);
-    expect(otroDip.id).toBe(2);
+    expect(dip.id).toBe(4);
+    expect(otroDip.id).toBe(5);
   });
 
 });

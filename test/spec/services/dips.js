@@ -16,23 +16,22 @@ describe('Service: Dips', function () {
 
   describe('count', function () {
     it('deberia devolver la cantidad de dips', function () {
-      expect(Dips.count()).toBe(0);
+      expect(Dips.count()).toBe(3);
     });
   });
 
   describe('add', function () {
     it('deberia agregar dips', function () {
       var dip = new Dip('Hola mundo', '<div>Hola</div>');
-      expect(Dips.count()).toBe(0);
+      expect(Dips.count()).toBe(3);
       Dips.add(dip);
-      expect(Dips.count()).toBe(1);
+      expect(Dips.count()).toBe(4);
     });
   });
 
   describe('get', function () {
     it('deberia devolver dip por id', function () {
       var dip = new Dip('Hola mundo', '<div>Hola</div>');
-      dip.id = 1;
       Dips.add(dip);
       var resultado = Dips.get(dip.id);
       expect(resultado).toEqual(dip);
@@ -41,11 +40,8 @@ describe('Service: Dips', function () {
 
   describe('all', function () {
     it('deberia devolver todos los dips', function () {
-      var dip = new Dip('Hola mundo', '<div>Hola</div>');
-      var otroDip = new Dip('Chau mundo', '<div>Chau</div>');
-      Dips.add(dip);
-      Dips.add(otroDip);
-      expect(Dips.all().length).toBe(2);
+      // App crea 3 dips al comenzar
+      expect(Dips.all().length).toBe(3);
     });
   });
 

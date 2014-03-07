@@ -4,7 +4,7 @@ describe('Controller: DipCtrl', function () {
 
   // load the controller's module
   beforeEach(module('anotableApp', function ($provide) {
-    DipsMock = jasmine.createSpyObj('Dips', ['get']);
+    DipsMock = jasmine.createSpyObj('Dips', ['get', 'add']);
     $provide.value('Dips', DipsMock);
   }));
 
