@@ -2,6 +2,22 @@
 
 angular.module('anotableApp')
 .service('Dips', function Dips() {
-  // AngularJS will instantiate a singleton by calling "new" on this function
-  this.get = function () {};
+  var _dips = [];
+
+  this.get = function (id) {
+    function coincideId (dip) {
+      return dip.id === id;
+    }
+    return _dips.filter(coincideId)[0];
+  };
+  this.count = function () {
+    return _dips.length;
+  };
+  this.add = function (dip) {
+    _dips.push(dip);
+  };
+  this.all = function () {
+    var resultado = _dips;
+    return resultado;
+  };
 });

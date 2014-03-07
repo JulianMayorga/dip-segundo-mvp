@@ -20,4 +20,13 @@ describe('Service: Dip', function () {
     expect(dip.codigo).toBe(codigo);
   });
 
+  it('deberia generar ids autoincrementales', function () {
+    var nombre = 'Hola mundo';
+    var codigo = '<div>Hola mundo</div>';
+    var dip = new Dip(nombre, codigo);
+    var otroDip = new Dip(nombre, codigo);
+    expect(dip.id).toBe(1);
+    expect(otroDip.id).toBe(2);
+  });
+
 });
