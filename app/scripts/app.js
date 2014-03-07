@@ -5,6 +5,7 @@ angular.module('anotableApp', [
   'ngResource',
   'ngSanitize',
   'hljs',
+  'ui.bootstrap',
   'ngRoute'
 ])
 .config(function ($routeProvider) {

@@ -17,6 +17,8 @@ describe('Controller: MainCtrl', function () {
   }));
 
   it('deberia tener el codigo ejemplo', function () {
-    expect(scope.code).toBeDefined();
+    expect(scope.html).toBeDefined();
+    expect(scope.js).toBeDefined();
+    expect(scope.css).toBeDefined();
   });
 });

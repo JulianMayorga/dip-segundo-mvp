@@ -5,3 +5,5 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 .annotator-outer {
   white-space: normal;
 }
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
