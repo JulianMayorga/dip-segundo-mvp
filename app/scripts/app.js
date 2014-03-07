@@ -14,6 +14,10 @@ angular.module('anotableApp', [
     templateUrl: 'views/main.html',
     controller: 'MainCtrl'
   })
+  .when('/dip/:dipId', {
+    templateUrl: 'views/dip.html',
+    controller: 'DipCtrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

@@ -15,4 +15,10 @@ describe('App', function() {
     var dips = element.all(by.css('.dips li'));
     expect(dips.count()).toBe(3);
   });
+
+  it('deberia cambiar la pagina al cliquear un dip', function () {
+    var dips = element.all(by.css('.dips li'));
+    dips.first().click();
+    expect(browser.getCurrentUrl()).toContain('/dip/');
+  });
 });
