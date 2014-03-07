@@ -2,5 +2,8 @@
 
 angular.module('anotableApp')
   .controller('DipCtrl', function ($scope, $routeParams, Dips) {
-    Dips.get($routeParams.dipId);
+    var dip = Dips.get($routeParams.dipId);
+    $scope.html = dip.html;
+    $scope.css = dip.css;
+    $scope.js = dip.js;
   });

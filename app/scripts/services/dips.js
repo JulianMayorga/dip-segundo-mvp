@@ -6,9 +6,10 @@ angular.module('anotableApp')
 
   this.get = function (id) {
     function coincideId (dip) {
-      return dip.id === id;
+      return dip.id === +id; //+ convierte a int
     }
-    return _dips.filter(coincideId)[0];
+    var resultado = _dips.filter(coincideId)[0];
+    return resultado;
   };
   this.count = function () {
     return _dips.length;

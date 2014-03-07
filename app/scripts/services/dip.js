@@ -6,7 +6,9 @@ angular.module('anotableApp')
 
     var Dip = function (nombre, codigo) {
       this.nombre = nombre;
-      this.codigo = codigo;
+      this.html = codigo.html;
+      this.css = codigo.css;
+      this.js = codigo.js;
       this.id = ++_ids;
     };
 

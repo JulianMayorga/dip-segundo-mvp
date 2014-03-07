@@ -21,4 +21,19 @@ describe('App', function() {
     primerDip.click();
     expect(browser.getCurrentUrl()).toContain('/dip/1');
   });
+
+  it('deberia tener tabs', function () {
+    var primerDip = element(by.repeater('dip in dips').row(0).column('{{dip.nombre}}'));
+    primerDip.click();
+    var dips = element(by.css('.nav-tabs'));
+    expect(dips.isPresent()).toBe(true);
+  });
+
+  it('deberia tener contenido html', function () {
+    var primerDip = element(by.repeater('dip in dips').row(0).column('{{dip.nombre}}'));
+    primerDip.click();
+    var html = element(by.css('.html .hljs'));
+    expect(html.getText()).not.toBe('');
+  });
+
 });
