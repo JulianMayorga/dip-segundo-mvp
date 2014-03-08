@@ -365,9 +365,16 @@ module.exports = function (grunt) {
         }
       },
     },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
+    }
   });
 
   grunt.loadNpmTasks('grunt-protractor-runner');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
